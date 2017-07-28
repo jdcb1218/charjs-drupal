@@ -1,0 +1,31 @@
+entity.intergrupo.collection:
+  path: '/admin/config/system/intergrupo'
+  defaults:
+    _entity_list: 'intergrupo'
+    _title: 'intergrupo configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.intergrupo.add_form:
+  path: '/admin/config/system/intergrupo/add'
+  defaults:
+    _entity_form: 'intergrupo.add'
+    _title: 'Add intergrupo'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.intergrupo.edit_form:
+  path: '/admin/config/system/intergrupo/{intergrupo}'
+  defaults:
+    _entity_form: 'intergrupo.edit'
+    _title: 'Edit intergrupo'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.intergrupo.delete_form:
+  path: '/admin/config/system/intergrupo/{intergrupo}/delete'
+  defaults:
+    _entity_form: 'intergrupo.delete'
+    _title: 'Delete intergrupo'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,4 @@
+access all intergrupo:
+  title: 'Intergrupo  access control'
+  description: 'Intergrupo access control when accessing module.'
+  restrict access: TRUE

@@ -1,0 +1,10 @@
+name: Intergrupo Manage quotes 
+description: Manage Entity Api
+type: module
+core: 8.x
+# version: VERSION
+# core: 8.x
+package: Integrupo
+configure: entity.intergrupo.collection
+version : '8.0.1'
+datestamp: 1498069701

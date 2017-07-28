@@ -1,0 +1,5 @@
+entity.intergrupo.add_form:
+  route_name: 'entity.intergrupo.add_form'
+  title: 'Agregar cita'
+  appears_on:
+    - entity.intergrupo.collection

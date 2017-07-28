@@ -1,0 +1,82 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function intergrupo_schema() {
+   $schema['intergrupo'] = array(
+   'fields' => array(
+        'id' => array(
+          'description' => 'Id table entity.',
+          'type' => 'serial',
+          'unsigned' => TRUE,
+          'not null' => TRUE
+        ),
+        'fid' => array(
+          'description' => 'File ID.', 
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+         'module' => array(
+           'description' => 'The name of the module that is using the file.', 
+           'type' => 'varchar_ascii',
+           'length' => DRUPAL_EXTENSION_NAME_MAX_LENGTH,
+           'not null' => TRUE,
+           'default' => '',
+         ),
+          'type' => array(
+             'description' => 'The name of the object type in which the file is used.', 
+             'type' => 'varchar_ascii',
+             'length' => 64,
+             'not null' => TRUE,
+             'default' => '',
+           ),
+         'count' => array(
+            'description' => 'Counts Rows Db', 
+            'type' => 'int',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+          ),                            
+         'document' => array(
+            'type' => 'varchar',
+            'length' => 40, 
+            'not null' => true,
+            'description' => 'Document (CC)',
+         ),
+         'email' => array(
+            'description' => 'Email of people', 
+            'type' => 'varchar',
+            'length' => 40, 
+            'not null' => true,
+            'description' => 'Document (CC)',
+          ),
+         'date' => array(
+            'type' => 'varchar',
+            'length' => 40,
+            'not null' => true,
+            'description' => 'Date of quote',
+         ),
+         'hour' => array(
+            'type' => 'varchar',
+            'length' => 40,
+            'not null' => true,
+            'description' => 'Hour of quote',
+         ),
+         'description' => array(
+            'type' => 'varchar',
+            'length' => 2000,
+            'not null' => true,
+            'description' => 'Description of quote',
+         ),                  
+       ),
+      'primary key' => array('id'),
+      'indexes' => array(
+          'type_id' => array('type', 'id'), 
+          'fid_count' => array('fid', 'count'), 
+          'fid_module' => array('fid', 'module'),
+        ), 
+    );
+  return $schema;
+}

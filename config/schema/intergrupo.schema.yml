@@ -1,0 +1,28 @@
+intergrupo.intergrupo.*:
+  type: config_entity
+  label: 'intergrupo config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    delete:
+      type: delete
+      label: 'Label'      
+    document:
+      type: document
+      label: 'Label'
+    email:
+      type: email
+      label: 'Label'
+    date:
+      type: date
+      label: 'Label'                              
+    hour:
+      type: hour
+      label: 'Label'
+    description:
+      type: description
+      label: 'Label'               
